@@ -1,7 +1,5 @@
 package com.massivecraft.factions.entity;
 
-import java.util.List;
-
 import com.massivecraft.factions.event.EventFactionsCreateFlags;
 import com.massivecraft.massivecore.PredictateIsRegistered;
 import com.massivecraft.massivecore.Prioritized;
@@ -9,6 +7,8 @@ import com.massivecraft.massivecore.Registerable;
 import com.massivecraft.massivecore.collections.MassiveList;
 import com.massivecraft.massivecore.store.Entity;
 import com.massivecraft.massivecore.util.Txt;
+
+import java.util.List;
 
 public class MFlag extends Entity<MFlag> implements Prioritized, Registerable
 {
@@ -69,7 +69,7 @@ public class MFlag extends Entity<MFlag> implements Prioritized, Registerable
 		getFlagMonsters();
 		getFlagPowerloss();
 		getFlagPvp();
-		getFlagFriendlyire();
+		getFlagFriendlyFire();
 		getFlagExplosions();
 		getFlagOfflineexplosions();
 		getFlagFirespread();
@@ -83,7 +83,7 @@ public class MFlag extends Entity<MFlag> implements Prioritized, Registerable
 	public static MFlag getFlagMonsters() { return getCreative(PRIORITY_MONSTERS, ID_MONSTERS, ID_MONSTERS, "Can monsters spawn in this territory?", "Monsters can spawn in this territory.", "Monsters can NOT spawn in this territory.", false, true, true); }
 	public static MFlag getFlagPowerloss() { return getCreative(PRIORITY_POWERLOSS, ID_POWERLOSS, ID_POWERLOSS, "Is power lost on death in this territory?", "Power is lost on death in this territory.", "Power is NOT lost on death in this territory.", true, false, true); }
 	public static MFlag getFlagPvp() { return getCreative(PRIORITY_PVP, ID_PVP, ID_PVP, "Can you PVP in territory?", "You can PVP in this territory.", "You can NOT PVP in this territory.", true, false, true); }
-	public static MFlag getFlagFriendlyire() { return getCreative(PRIORITY_FRIENDLYFIRE, ID_FRIENDLYFIRE, ID_FRIENDLYFIRE, "Can friends hurt eachother in this territory?", "Friends can hurt eachother in this territory.", "Friends can NOT hurt eachother in this territory.", false, false, true); }
+	public static MFlag getFlagFriendlyFire() { return getCreative(PRIORITY_FRIENDLYFIRE, ID_FRIENDLYFIRE, ID_FRIENDLYFIRE, "Can friends hurt eachother in this territory?", "Friends can hurt eachother in this territory.", "Friends can NOT hurt eachother in this territory.", false, false, true); }
 	public static MFlag getFlagExplosions() { return getCreative(PRIORITY_EXPLOSIONS, ID_EXPLOSIONS, ID_EXPLOSIONS, "Can explosions occur in this territory?", "Explosions can occur in this territory.", "Explosions can NOT occur in this territory.", true, false, true); }
 	public static MFlag getFlagOfflineexplosions() { return getCreative(PRIORITY_OFFLINEEXPLOSIONS, ID_OFFLINEEXPLOSIONS, ID_OFFLINEEXPLOSIONS, "Can explosions occur if faction is offline?", "Explosions can occur if faction is offline.", "Explosions can NOT occur if faction is offline.", false, false, true); }
 	public static MFlag getFlagFirespread() { return getCreative(PRIORITY_FIRESPREAD, ID_FIRESPREAD, ID_FIRESPREAD, "Can fire spread in territory?", "Fire can spread in this territory.", "Fire can NOT spread in this territory.", true, false, true); }

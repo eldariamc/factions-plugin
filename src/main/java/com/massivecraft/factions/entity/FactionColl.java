@@ -1,15 +1,16 @@
 package com.massivecraft.factions.entity;
 
-import java.util.*;
-
-import com.massivecraft.massivecore.store.Coll;
-import com.massivecraft.massivecore.store.MStore;
-import com.massivecraft.massivecore.util.Txt;
 import com.massivecraft.factions.Const;
 import com.massivecraft.factions.Factions;
 import com.massivecraft.factions.Rel;
 import com.massivecraft.factions.integration.Econ;
 import com.massivecraft.factions.util.MiscUtil;
+import com.massivecraft.massivecore.store.Coll;
+import com.massivecraft.massivecore.store.MStore;
+import com.massivecraft.massivecore.util.Txt;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class FactionColl extends Coll<Faction>
 {
@@ -96,7 +97,7 @@ public class FactionColl extends Coll<Faction>
 		faction.setFlag(MFlag.getFlagInfpower(), true);
 		faction.setFlag(MFlag.getFlagPowerloss(), true);
 		faction.setFlag(MFlag.getFlagPvp(), true);
-		faction.setFlag(MFlag.getFlagFriendlyire(), false);
+		faction.setFlag(MFlag.getFlagFriendlyFire(), false);
 		faction.setFlag(MFlag.getFlagMonsters(), true);
 		faction.setFlag(MFlag.getFlagExplosions(), true);
 		faction.setFlag(MFlag.getFlagOfflineexplosions(), true);
@@ -130,7 +131,7 @@ public class FactionColl extends Coll<Faction>
 		faction.setFlag(MFlag.getFlagInfpower(), true);
 		faction.setFlag(MFlag.getFlagPowerloss(), false);
 		faction.setFlag(MFlag.getFlagPvp(), false);
-		faction.setFlag(MFlag.getFlagFriendlyire(), false);
+		faction.setFlag(MFlag.getFlagFriendlyFire(), false);
 		faction.setFlag(MFlag.getFlagMonsters(), false);
 		faction.setFlag(MFlag.getFlagExplosions(), false);
 		faction.setFlag(MFlag.getFlagOfflineexplosions(), false);
@@ -163,7 +164,7 @@ public class FactionColl extends Coll<Faction>
 		faction.setFlag(MFlag.getFlagInfpower(), true);
 		faction.setFlag(MFlag.getFlagPowerloss(), true);
 		faction.setFlag(MFlag.getFlagPvp(), true);
-		faction.setFlag(MFlag.getFlagFriendlyire(), true);
+		faction.setFlag(MFlag.getFlagFriendlyFire(), true);
 		faction.setFlag(MFlag.getFlagMonsters(), true);
 		faction.setFlag(MFlag.getFlagExplosions(), true);
 		faction.setFlag(MFlag.getFlagOfflineexplosions(), true);
