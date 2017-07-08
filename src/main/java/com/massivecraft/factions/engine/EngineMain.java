@@ -728,7 +728,7 @@ public class EngineMain extends EngineAbstract
 	// CAN COMBAT DAMAGE HAPPEN
 	// -------------------------------------------- //
 	
-	@EventHandler(priority = EventPriority.NORMAL, ignoreCancelled = true)
+	@EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
 	public void canCombatDamageHappen(EntityDamageEvent event)
 	{
 		// TODO: Can't we just listen to the class type the sub is of?
@@ -740,7 +740,7 @@ public class EngineMain extends EngineAbstract
 	}
 
 	// mainly for flaming arrows; don't want allies or people in safe zones to be ignited even after damage event is cancelled
-	@EventHandler(priority = EventPriority.NORMAL, ignoreCancelled = true)
+	@EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
 	public void canCombatDamageHappen(EntityCombustByEntityEvent event)
 	{
 		EntityDamageByEntityEvent sub = new EntityDamageByEntityEvent(event.getCombuster(), event.getEntity(), EntityDamageEvent.DamageCause.FIRE, 0D);
@@ -748,7 +748,7 @@ public class EngineMain extends EngineAbstract
 		event.setCancelled(true);
 	}
 
-	@EventHandler(priority = EventPriority.NORMAL, ignoreCancelled = true)
+	@EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
 	public void canCombatDamageHappen(PotionSplashEvent event)
 	{
 		// If a harmful potion is splashing ...
