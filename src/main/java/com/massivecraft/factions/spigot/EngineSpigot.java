@@ -1,16 +1,14 @@
 package com.massivecraft.factions.spigot;
 
-import org.bukkit.entity.Entity;
-import org.bukkit.entity.EntityType;
-import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.EventPriority;
-import org.bukkit.event.player.PlayerInteractAtEntityEvent;
-import org.bukkit.plugin.Plugin;
-
 import com.massivecraft.factions.Factions;
 import com.massivecraft.factions.engine.EngineMain;
 import com.massivecraft.massivecore.EngineAbstract;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
+import org.bukkit.event.player.PlayerInteractEntityEvent;
+import org.bukkit.plugin.Plugin;
 
 
 public class EngineSpigot extends EngineAbstract
@@ -56,7 +54,7 @@ public class EngineSpigot extends EngineAbstract
 	// It seems we can only cancel interaction with armor stands from here.
 	// Thus we only handle armor stands from here and handle everything else in EngineMain.
 	@EventHandler(priority = EventPriority.NORMAL, ignoreCancelled = true)
-	public void onPlayerInteractAtEntity(PlayerInteractAtEntityEvent event)
+	public void onPlayerInteractAtEntity(PlayerInteractEntityEvent event)
 	{
 		// Gather Info
 		final Player player = event.getPlayer();
@@ -64,7 +62,7 @@ public class EngineSpigot extends EngineAbstract
 		final boolean verboose = true;
 		
 		// Only care for armor stands.
-		if (entity.getType() != EntityType.ARMOR_STAND) return;
+		//if (entity.getType() != EntityType.ARMOR_STAND) return;
 		
 		// If we can't use ...
 		if (EngineMain.canPlayerUseEntity(player, entity, verboose)) return;
