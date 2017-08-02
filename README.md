@@ -1,6 +1,6 @@
 Factions-Plugin
 ===============
-Fork du plugin [Factions 2.7.5](MassiveCraft/Factions) de MassiveCraft.
+Fork du plugin [Factions 2.7.5](https://github.com/MassiveCraft/Factions) de MassiveCraft.
 
 Modifications
 -------------
